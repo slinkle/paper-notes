@@ -24,7 +24,9 @@ Vinyals O, Blundell C, Lillicrap T, et al. Matching Networks for One Shot Learni
 
 预测公式如下：非常类似于 Nearest Neighbours 的公式
 
-![捕获.PNG](https://i.loli.net/2018/04/19/5ad8833283e57.png) 
+<div align="center">
+  <img src="https://i.loli.net/2018/04/19/5ad8833283e57.png" />
+</div>
 
 其中x_i和y_i是训练样本集S的样本和对应标注，a是感知机模型。可以看出新物体的类别预测是样本集中标注的线性组合。
 
@@ -35,7 +37,9 @@ Vinyals O, Blundell C, Lillicrap T, et al. Matching Networks for One Shot Learni
 
 其中的感知机模型如下：类似于余弦距离的softmax
 
-![捕获.PNG](https://i.loli.net/2018/04/19/5ad88b3f81caa.png)
+<div align="center">
+  <img src="https://i.loli.net/2018/04/19/5ad88b3f81caa.png" />
+</div>
 
 - 1. g 基于 bidirectional LSTM
 - 2. f 基于set2set LSTM
