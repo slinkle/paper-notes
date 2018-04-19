@@ -16,7 +16,7 @@ Vinyals O, Blundell C, Lillicrap T, et al. Matching Networks for One Shot Learni
 (metric learning)的方法。我们致力于从参数化和非参数化的模型中抽取最好的特征，从而获得更好的泛化性能。
 
 - **medeling level**: Matching Networks(MN),综合了attention和memory方面的优势从而实现快速学习。
-- **training procedure**: 基于机器学习的原则，测试和训练的条件保持一致。
+- **training procedure**: 基于机器学习的原则，测试和训练在同样条件下进行。也就是说在训练时，也只见到少量样本。
 
 ## model architecture
 
