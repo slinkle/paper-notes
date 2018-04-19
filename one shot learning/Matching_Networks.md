@@ -22,8 +22,11 @@ Vinyals O, Blundell C, Lillicrap T, et al. Matching Networks for One Shot Learni
 
 为神经网络加入记忆机制 P(B|A) A和B可以是sequence，也可以是sets（更符合我们的需求）。 set-to-set
 
-预测公式 ![捕获.PNG](https://i.loli.net/2018/04/19/5ad8833283e57.png) 这样
-
+预测公式如下：非常类似于 Nearest Neighbours 的公式
+![捕获.PNG](https://i.loli.net/2018/04/19/5ad8833283e57.png) 
+其中x_i和y_i是训练样本集S的样本和对应标注，a是感知机模型。可以看出新物体的类别预测是样本集中标注的线性组合。
+1. 我们可以这样看，把a看成一个感知机，y_i是绑定在x_i上的一些记忆，当输入新数据时，从记忆中找出最相似的进行标注。
+2. 该公式是一个非参数化的形式，当训练集增大时，对应的记忆量也增大，所以能更好的适应新的输入集。
 
 
 
