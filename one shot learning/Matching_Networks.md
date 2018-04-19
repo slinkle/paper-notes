@@ -41,8 +41,8 @@ Vinyals O, Blundell C, Lillicrap T, et al. Matching Networks for One Shot Learni
   <img src="https://i.loli.net/2018/04/19/5ad88b3f81caa.png" />
 </div>
 
-- 1. g 基于 bidirectional LSTM
-- 2. f 基于set2set LSTM
+1. g 基于 bidirectional LSTM
+2. f 基于set2set LSTM
 
 ## 训练策略
 
