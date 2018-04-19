@@ -22,7 +22,7 @@ Vinyals O, Blundell C, Lillicrap T, et al. Matching Networks for One Shot Learni
 
 为神经网络加入记忆机制 P(B|A) A和B可以是sequence，也可以是sets（更符合我们的需求）。 set-to-set
 
-
+预测公式 ![捕获.PNG](https://i.loli.net/2018/04/19/5ad8833283e57.png) 这样
 
 
 
