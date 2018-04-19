@@ -15,5 +15,15 @@ Vinyals O, Blundell C, Lillicrap T, et al. Matching Networks for One Shot Learni
 参数。当然也有非参数化的模型，比如 Nearest Neighbours,它不需要进行训练但是它取得的性能依赖于所选的度量函数（metric）。由此产生了一些非参数化的度量学习
 (metric learning)的方法。我们致力于从参数化和非参数化的模型中抽取最好的特征，从而获得更好的泛化性能。
 
-- **medeling level** Matching Networks(MN),综合了attention和memory方面的优势从而实现快速学习。
-- **training procedure** 基于机器学习的原则，测试和训练的条件保持一致。
+- **medeling level**: Matching Networks(MN),综合了attention和memory方面的优势从而实现快速学习。
+- **training procedure**: 基于机器学习的原则，测试和训练的条件保持一致。
+
+## model architecture
+
+为神经网络加入记忆机制 P(B|A) A和B可以是sequence，也可以是sets（更符合我们的需求）。 set-to-set
+
+
+
+
+
+
