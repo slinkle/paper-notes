@@ -20,7 +20,7 @@
 不同于LeCun等使用[**对比损失**](https://blog.csdn.net/autocyz/article/details/53149760) 作为相似度度量，我们直接使用带权重的L1距离结合sigmod激活函数再加上交叉熵计算损失。
 
 <div align="center">
-<img src="https://i.loli.net/2018/04/20/5ad9a0cdf0e38.png.png"  />
+<img src="https://i.loli.net/2018/04/20/5ad9a0cdf0e38.png"  />
 </div>
 
 ## 模型
