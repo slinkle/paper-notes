@@ -32,3 +32,20 @@ Zagoruyko S, Komodakis N. Learning to compare image patches via convolutional ne
 ### 3. central-surround
 
 对64x64大小的图片进行两次操作，一次是截取中间32x32大小的patch构成central patch,一次是将原图以2为步长进行降采样，得到surround patch。这样来讲，图片中间的信息被利用了两次，使得中间图像的信息对最终结果造成的影响比较大。
+
+## 训练
+
+目标函数：其中y_i={-1，1},-1表示不匹配图像对，1表示匹配，o_i(net)表示第i个样本的网络输出结果
+
+<div align="center">
+  <img src="https://i.loli.net/2018/04/23/5add8fd40b95d.png"  />
+</div>
+
+## 实验及结果
+
+### 局部图像块的实验
+
+综合实验结果来看，2ch-2stream获得最好的性能，证明了联合训练和融合多尺度信息的优势。
+
+
+
