@@ -20,15 +20,15 @@ Zagoruyko S, Komodakis N. Learning to compare image patches via convolutional ne
   <img src="https://i.loli.net/2018/04/23/5add8ce63d1ec.png"  />
 </div>
 
-1. 2-channel
+### 1. **2-channel
 
 将两张输入图片看成是两通道的一张图片，共同输入一路网络进行相同的处理，联合学习(***jointly***)
 
-2. siamese-based
+### 2. **siamese-based
 
-两张图片分别输入两路结构相同的网络进行特征提取，在顶层决策网络根据某种规则（如l1或l2距离）进行相似度计算
+两张图片分别输入两路结构相同的网络进行特征提取，在顶层决策网络根据某种规则（如*l1*或*l2*距离）进行相似度计算
 其中孪生网络siamese network 的两路分支网络不仅结构相同且共享相同参数，而pseudo-siamese网络的参数不共享，各自训练
 
-3. central-surround
+### 3. **central-surround
 
 对64x64大小的图片进行两次操作，一次是截取中间32x32大小的patch构成central patch,一次是将原图以2为步长进行降采样，得到surround patch。这样来讲，图片中间的信息被利用了两次，使得中间图像的信息对最终结果造成的影响比较大。
