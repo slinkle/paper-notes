@@ -63,11 +63,12 @@ embedding空间的最近邻问题。所以它通过学习一个度量空间(embe
 
 - **Distance Metric
 
-可能是因为 squared Euclidean 更符合Bregman divergence，实验表明它的效果要比 cosine distance 的效果好。
+可能是因为 **squared Euclidean** 更符合Bregman divergence，实验表明它的效果要比 **cosine distance** 的效果好。
 
 - **Episode composition
-
-
+ 
+实验证明训练时的类别数比测试时多要更有利。且少量多个样本比单个样本的性能要好些。
+ 
 ## 参考文献
 [1] Mensink T, Verbeek J, Perronnin F, et al. Distance-Based Image Classification: Generalizing to New Classes at Near Zero Cost[J]. IEEE Transactions on Pattern Analysis & Machine Intelligence, 2013, 35(11):2624-2637.
 [2] Rippel O, Paluri M, Dollar P, et al. Metric Learning with Adaptive Density Discrimination[J]. In ICLR, 2016.
