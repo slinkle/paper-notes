@@ -54,3 +54,20 @@ embedding空间的最近邻问题。所以它通过学习一个度量空间(embe
 ## 与匹配网络的对比
  
 对于单样本学习，原型网络和匹配网络是等价的，区别在于少样本学习。少样本学习的中心是样本的均值。
+
+对于少样本学习（而不仅仅只有一个样本）的情况，在类内进行聚类时还要考虑到一种partitioning scheme。正如[1][2]，他们需要一个额外的partitioning pahse，独立于权重更新之外的，而我们只是简单的用梯度下降进行学习。
+
+匹配网络或许能够借鉴到原型网络上，但是会增加学习参数，事实上使用我们的方法加上一些简单的设计策略已经有可能达到与之媲美的性能。
+
+## 可选的设计方案
+
+- **Distance Metric
+
+可能是因为 squared Euclidean 更符合Bregman divergence，实验表明它的效果要比 cosine distance 的效果好。
+
+- **Episode composition
+
+
+## 参考文献
+[1] Mensink T, Verbeek J, Perronnin F, et al. Distance-Based Image Classification: Generalizing to New Classes at Near Zero Cost[J]. IEEE Transactions on Pattern Analysis & Machine Intelligence, 2013, 35(11):2624-2637.
+[2] Rippel O, Paluri M, Dollar P, et al. Metric Learning with Adaptive Density Discrimination[J]. In ICLR, 2016.
