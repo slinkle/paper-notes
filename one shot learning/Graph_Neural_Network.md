@@ -18,15 +18,38 @@ Victor Garcia, Joan Bruna. Few-shot learning with graph neural networs. In Inter
 <img src="https://i.loli.net/2018/04/25/5ae08ec15eb26.png"  />
 </div>
 
+### 边的特征学习
+
 其中的A(i,j)k表示近邻矩阵，也可理解为边的表达，相当于同时学习边的特征：
 
 <div align="center">
 <img src="https://i.loli.net/2018/04/25/5ae08f4bc886b.png"  />
 </div>
 
-其中衡量：
+其中衡量两个相邻节点之间距离信息的公式为：
 
 <div align="center">
 <img src="https://i.loli.net/2018/04/25/5ae08f6294e75.png"  />
 </div>
 
+这个公式满足距离信息的对称性(d(a,b) = d(b,a))和Identity(d(a,a) = 0).
+
+### 初始节点的特征构建
+
+- 已知标注
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/25/5ae09b8810f01.png"  />
+</div>
+
+- 未知标注
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/25/5ae09bbe7aff3.png"  />
+</div>
+
+### GNN模型：x_k经过GNN得到x_k+1 = Gc(x_k)
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/25/5ae09d434b37b.png"  />
+</div>
