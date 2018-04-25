@@ -61,11 +61,11 @@ embedding空间的最近邻问题。所以它通过学习一个度量空间(embe
 
 ## 可选的设计方案
 
-- **Distance Metric
+- Distance Metric
 
 可能是因为 **squared Euclidean** 更符合Bregman divergence，实验表明它的效果要比 **cosine distance** 的效果好。
 
-- **Episode composition
+- Episode composition
  
 实验证明训练时的类别数比测试时多要更有利。且少量多个样本比单个样本的性能要好些。
  
