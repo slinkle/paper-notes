@@ -2,8 +2,6 @@
 
 Santoro, Adam, Bartunov, Sergey, Botvinick, Matthew, Wierstra, Daan, and Lillicrap, Timothy. Meta-learning with memory-augmented neural networks. In International Conference on Machine Learning (ICML), 2016.
 
-## 递归记忆模型
-
 ## 元学习
 
 参考博客[https://blog.csdn.net/mao_feng/article/details/78939864]
@@ -17,3 +15,11 @@ Santoro, Adam, Bartunov, Sergey, Botvinick, Matthew, Wierstra, Daan, and Lillicr
 <div align="center">
 <img src="https://i.loli.net/2018/04/26/5ae1465bc080e.png"  />
 </div>
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/26/5ae146ee32343.png"  />
+</div>
+
+## 递归记忆模型
+
+深度神经网络在遇到新数据时需要重新学习网络的参数.增加了外部存储(external memory)的神经网络图灵机Neural Turing Machines(NTMs)可以学习将知识表达存入记忆的策略，并学习如何使用这些表达来对新数据进行预测。本文基于NTMs的思想，结合外部存储可以快速准确预测那些只出现过一次的数据。
