@@ -46,4 +46,20 @@ Santoro, Adam, Bartunov, Sergey, Botvinick, Matthew, Wierstra, Daan, and Lillicr
 
 NTM可以通过缓慢更新权重来实现一个长时记忆，还可以通过外部存储进行短时记忆。它可以学习将信息表达存入记忆的策略，并如何利用这些表达进行预测。因此它可以实现对只见过一次的数据进行准确预测。
 
+我们的模型分为控制器和外部存储器两部分，这两部分之间通过读写操作进行交互，读就意味着从记忆中读取表征，写就是将得到的表征存入记忆中。其中控制器可以是LSTMs或者是前馈网络。现在我们给出一个输入x_t,控制器会产生一个编码key_t,这个要么直接作为记忆矩阵M_t的一行被写入存储器中，要么用于从存储器中提取表征。在提取的过程中，我们寻找对应的记忆矩阵的某一行的标准是余弦相似度：
 
+<div align="center">
+<img src="https://i.loli.net/2018/04/26/5ae1d363f37e7.png"  />
+</div>
+
+依次遍历记忆矩阵的各行，得到key_t与每一行的相似度，用softmax计算出一个读取权重向量wr_t:
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/26/5ae1d3eb57366.png"  />
+</div>
+
+接下来利用这个读取权重向量产生我们最终从记忆中提取的关于输入x_t的表征r_t:
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/26/5ae1d4470a6fb.png"  />
+</div>
