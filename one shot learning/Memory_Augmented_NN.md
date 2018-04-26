@@ -38,3 +38,12 @@ Santoro, Adam, Bartunov, Sergey, Botvinick, Matthew, Wierstra, Daan, and Lillicr
 <img src="https://i.loli.net/2018/04/26/5ae18a1aef205.png"  />
 </div>
 
+在输入数据给网络的时候，采取标签滞后的策略，在t时刻输入当前时刻的样本x_t和上一时刻的样本标签y_t-1,这样在t时刻是不知道样本x_t的标签的，需要自己预测再在下一时刻进行对比和损失计算，并在外部存储模块中储存样本编码和对应的标签信息，将这两者进行绑定，便于后续进行查询。同时，我们还希望通过这个过程学习到数据集的概率分布模型。
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/26/5ae18e9db435b.png"  />
+</div>
+
+
+
+
