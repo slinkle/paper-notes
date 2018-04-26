@@ -14,10 +14,6 @@ Victor Garcia, Joan Bruna. Few-shot learning with graph neural networs. In Inter
 
 这篇文章并不直接学习一种两张图片的相似性度量，而是对匹配网络进行了扩展，将其感知机的推理部分用图神经网络代替。
 
-<div align="center">
-<img src="https://i.loli.net/2018/04/25/5ae08ec15eb26.png"  />
-</div>
-
 ### 边的特征学习
 
 其中的A(i,j)k表示近邻矩阵，也可理解为边的表达，相当于同时学习边的特征：
@@ -54,7 +50,11 @@ Victor Garcia, Joan Bruna. Few-shot learning with graph neural networs. In Inter
 <img src="https://i.loli.net/2018/04/25/5ae09d434b37b.png"  />
 </div>
 
-如图1所示，具体操作流程就是先初始化节点特征向量x_0，这里图片集的每个样本就是图的节点，以此构建边模型A(i,j)k，现在既有边模型又有节点模型，构成了完整的图模型，接着通过图卷积更新了节点的embedding(x_k+1 = Gc(x_k))，然后用更新的节点更新边模型A(i,j)k+1，从而更新图模型，接着用图卷积更新节点embedding，这样便构成了一个深度GNN，最后输出样本的预测标签。
+具体操作流程就是先初始化节点特征向量x_0，这里图片集的每个样本就是图的节点，以此构建边模型A(i,j)k，现在既有边模型又有节点模型，构成了完整的图模型，接着通过图卷积更新了节点的embedding(x_k+1 = Gc(x_k))，然后用更新的节点更新边模型A(i,j)k+1，从而更新图模型，接着用图卷积更新节点embedding，这样便构成了一个深度GNN，最后输出样本的预测标签。
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/25/5ae08ec15eb26.png"  />
+</div>
 
 分解过程如下：
 
