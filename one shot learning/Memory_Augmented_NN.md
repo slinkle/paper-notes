@@ -44,6 +44,6 @@ Santoro, Adam, Bartunov, Sergey, Botvinick, Matthew, Wierstra, Daan, and Lillicr
 <img src="https://i.loli.net/2018/04/26/5ae18e9db435b.png"  />
 </div>
 
-
+NTM可以通过缓慢更新权重来实现一个长时记忆，还可以通过外部存储进行短时记忆。它可以学习将信息表达存入记忆的策略，并如何利用这些表达进行预测。因此它可以实现对只见过一次的数据进行准确预测。
 
 
