@@ -53,3 +53,11 @@ Victor Garcia, Joan Bruna. Few-shot learning with graph neural networs. In Inter
 <div align="center">
 <img src="https://i.loli.net/2018/04/25/5ae09d434b37b.png"  />
 </div>
+
+如图1所示，具体操作流程就是先初始化节点特征向量x_0，这里图片集的每个样本就是图的节点，以此构建边模型A(i,j)k，现在既有边模型又有节点模型，构成了完整的图模型，接着通过图卷积更新了节点的embedding(x_k+1 = Gc(x_k))，然后用更新的节点更新边模型A(i,j)k+1，从而更新图模型，接着用图卷积更新节点embedding，这样便构成了一个深度GNN，最后输出样本的预测标签。
+
+分解过程如下：
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/26/5ae13f3af3083.png"  />
+</div>
