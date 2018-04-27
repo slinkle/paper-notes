@@ -51,5 +51,12 @@ f_t为忘记门，当learner陷入局部最优，即梯度为0但是损失很大
 <img src="https://i.loli.net/2018/04/27/5ae320add83eb.png"  />
 </div>
 
+## 可视化
+
+下图对meat-leaner的训练过程进行了可视化，把gate的值画出来，观察其在不同的数据之间是否存在变化。在1-shot上，meta-leaner学了10步，5-shot上学了5步。对于遗忘门，meta-leaner采用一个简单的权值衰减策略，而且每层都比较一致。输入门在不同数据上的变化比较大，说明meat-leaner没有采用一个固定的优化策略，而且1-shot和5-shot的表现也不同，说明meta-leaner对两者采用了不同的方法。如图：
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/27/5ae322a5eb871.png"  />
+</div>
 
 
