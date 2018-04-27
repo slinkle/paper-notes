@@ -7,6 +7,10 @@ Ravi, Sachin and Larochelle, Hugo. Optimization as a model for few-shot learning
 
 这个优化算法同时考虑到一个任务的短时知识和跨多个任务的长时知识。每个任务只有少量的更新，即我们希望通过少量的迭代，训练meta-leaner使得leaner在每个任务上收敛到一个好的解，从而使得这个优化算法能够拥有较好的泛化能力。
 
+<div>
+<img src="https://i.loli.net/2018/04/27/5ae31a234e508.png"  />
+</div>
+
 ## 模型
 
 首先我们有一个神经网络leaner要学习一个分类或者回归任务。网络要更新的参数为theta。基于梯度下降的参数更新公式为：
@@ -30,3 +34,22 @@ Ravi, Sachin and Larochelle, Hugo. Optimization as a model for few-shot learning
 <div align="center">
 <img src="https://i.loli.net/2018/04/27/5ae2868e836d6.png"  />
 </div>
+
+f_t为忘记门，当learner陷入局部最优，即梯度为0但是损失很大，我们需要忘记之前的值，因此f_t的最优值不应该为常数1：
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/27/5ae31b16e9f21.png"  />
+</div>
+
+另外我们还学习了LSTM的cell state的初值c0，将它看成meta-leaner的一个参数。这关系到meta-leaner要训练的分类器的权重的初值。这个初值的学习可以使meta-leaner决定leaner的权重初始值，从而使训练从一个较好的起点开始，使得优化能够快速进行。
+
+## 训练
+
+以训练miniImagenet数据集为例，训练过程中，我们从Dmeat-train的训练集（64个类，每类600个样本）中随机采样5个样本，每个类5个样本，构成训练集，去学习leaner；然后从Dmeat-train测试集的样本（64个类，每类剩下的样本）中采样构成测试集，集合中每类有15个样本，用来得到leaner的loss，去学习meta leaner。评估过程也是一样，我们从Dmeta-test的训练集（16个类，每类600个样本）中随机采样5个类，每个类5个样本，构成训练集去学习leaner；然后从Dmeat-test测试集的样本（16个类，每类剩下的样本）中采样构成测试集，每个类有15个样本，用来获得leaner的loss，去学习meta leaner。训练和测试过程在下图中用虚线分割：
+
+<div align="center">
+<img src="https://i.loli.net/2018/04/27/5ae320add83eb.png"  />
+</div>
+
+
+
