@@ -17,7 +17,7 @@ Ravi, Sachin and Larochelle, Hugo. Optimization as a model for few-shot learning
 
 我们对比发现，这个更新公式和LSTM的状态更新公式类似：
 
-<div align="center">
+<div>
 <img src="https://i.loli.net/2018/04/27/5ae283eb07341.png"  />
 </div>
 
