@@ -26,6 +26,6 @@ meta-learning的目标是在各种不同的学习任务上训练出一个模型�
 
 整个训练过程的伪代码如下：有内外两个循环，外循环是训练meta leaner的参数theta，是跨任务训练的全局模型；内循环是针对每个任务，做梯度下降得到theta'，便于在全局模型上进行梯度下降。
 
-<div align="center">
+<div>
 <img src="https://i.loli.net/2018/05/02/5ae968172e1fa.png"  />
 </div>
