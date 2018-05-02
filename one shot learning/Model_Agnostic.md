@@ -18,4 +18,14 @@ meta-learning的目标是在各种不同的学习任务上训练出一个模型�
 
 在meta-learning阶段我们通过一个任务集来训练一个model/leaner，使之可以迅速适应新任务。在训练时，一整个任务被当作一个训练样本。
 
+目标函数如下，根据theta得到theta'优化f_theta',使之在从p(t)上采样的各个任务上误差最小。
 
+<div align="center">
+<img src="https://i.loli.net/2018/05/02/5ae966fba3129.png"  />
+</div>
+
+整个训练过程的伪代码如下：有内外两个循环，外循环是训练meta leaner的参数theta，是跨任务训练的全局模型；内循环是针对每个任务，做梯度下降得到theta'，便于在全局模型上进行梯度下降。
+
+<div align="center">
+<img src="https://i.loli.net/2018/05/02/5ae968172e1fa.png"  />
+</div>
