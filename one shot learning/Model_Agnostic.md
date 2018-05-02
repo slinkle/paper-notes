@@ -2,7 +2,7 @@
 
 Chelsea Finn, Pieter Abbeel, and Sergey Levine. Model-agnostic meta-learning for fast adaptation of deep networks. *Proceedings of the 34th International Conference on Machine Learning 2017.
 
-**模型无关自适应 元学习
+**模型无关自适应 元学习**
 
 <div align="center">
 <img src="https://i.loli.net/2018/05/01/5ae7e36858c33.png"  />
