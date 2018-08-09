@@ -62,7 +62,23 @@ c是分割场景得到的模型点云，m取自M(c)，M(c)是模型库中与c最
 <img src="https://i.loli.net/2018/08/09/5b6bff651ac0a.png"  />
 </div>
 
+由于模型库中也存放了相邻部分的组合体，所以可以更高效的进行融合。
 
+## 物体重建
 
+两次分割后，得到物体组合R，在当前场景表面T下。
 
+### NBO下一个最优物体
+
+机器人要从R中挑选出感兴趣的一个物体作为下一个要访问的对象。选择的依据是objectness score+visual saliency(显著 突出),取最大者。objectness score- O(r)衡量的是当前物体能与模型中的物体有多像，取的是模型中相似物体相似度的最大值。visual saliency score-s(r)是由当前的机器人视角决定的，由三部分组成。
+
+<div align="center">
+<img src="https://i.loli.net/2018/08/09/5b6c055dada8e.png"  />
+</div>
+
+这三部分分别代表distance,orientation,size.
+
+### NBV 下一个最佳视角
+
+得到最优访问物体后，机器人就向该物体移动，并根据NBV策略进行主动扫描。
 
