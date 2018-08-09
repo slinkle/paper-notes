@@ -25,8 +25,11 @@ Ligang Liu, Xi Xia, Han Sun, Hui Huang and Kai Xu*, "Object-Aware Guidance for A
 ### 模型驱动的物体识别
 
 * 三维模型库：构建一个模型库为物体识别提供先验信息。 模型库中对一个物体有三种成分进行描述：
+
 ** 对一个物体进行自上而下的扫描后得到的完整物体模型
+
 ** 对其进行前述方法的分割，将分割得到的组成部分放入模型库中
+
 ** 将分割结果相邻的两个部分成对放入模型库中
 
 <div align="center">
