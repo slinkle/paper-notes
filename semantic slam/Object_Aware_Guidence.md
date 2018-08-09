@@ -34,3 +34,25 @@ Ligang Liu, Xi Xia, Han Sun, Hui Huang and Kai Xu*, "Object-Aware Guidance for A
 <div align="center">
 <img src="https://i.loli.net/2018/08/09/5b6bf020924ae.png"  />
 </div>
+
+* 相似模型库：由于可能存在遮挡，采取部分匹配方法在模型库中寻找相似物体。选取关键点（500个），提取3D形状描述子，加上BoW方法进行部分匹配，提取出最相近的5个模型
+
+* Objectness:两个物体匹配的相似度衡量标准：
+
+<div align="center">
+<img src="https://i.loli.net/2018/08/09/5b6bfa2a24a2c.png"  />
+</div>
+
+c是分割场景得到的模型点云，m取自M(c)，M(c)是模型库中与c最相近的模型集合。那么，d(c,m)衡量的是c相对于m的相似度，d(m,c)衡量的是c相对于m的完整度。物体性(objectness)的衡量就可以由这两个值得到：
+
+<div align="center">
+<img src="https://i.loli.net/2018/08/09/5b6bfa2da3955.png"  />
+</div>
+
+### 后分割：objectness-based
+
+
+
+
+
+
