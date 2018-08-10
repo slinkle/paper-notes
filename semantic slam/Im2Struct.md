@@ -14,7 +14,7 @@ Chengjie Niu, Jun Li and Kai Xu*, "Im2Struct: Recovering 3D Shape Structure from
 
 > 是否可拓展为在复杂背景下的重构，就是先做物体分割，应该已经做了
 
-<div>
+<div align="center">
 <img src="https://i.loli.net/2018/08/10/5b6d3b06142c2.png"  />
 </div>
 
