@@ -35,7 +35,7 @@ Chengjie Niu, Jun Li and Kai Xu*, "Im2Struct: Recovering 3D Shape Structure from
 * cuboid primitives
 * manifold surfaces
 
-
+> 如何进一步将获得的结构信息用于模型匹配，实现RGB对环境的重构，且无需多视角，与object_aware_guidence对比
 
 
 
