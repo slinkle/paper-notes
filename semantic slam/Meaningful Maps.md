@@ -13,3 +13,13 @@ Sünderhauf N, Pham T T, Latif Y, et al. Meaningful maps with object-oriented se
 <div align="center">
 <img src="https://i.loli.net/2018/08/12/5b6fd1ab5d885.png"  />
 </div>
+
+## 语义建图
+
+semantic slam指的是一个双向的信息流：semantic helps slam and slam helps semantic。本文的方法仅是一个方向，即slam helps semantics,slam的结果是为了更好的为环境中的物体赋予语义标签，所以称之为semantic mapping语义建图。
+
+### 物体检测
+
+在语义建图中，需要对图像中的物体实体进行识别、定位和分割。本文采取SSD方法对图像中的物体提取box并给出置信度。
+
+
